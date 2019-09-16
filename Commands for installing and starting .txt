@@ -1,0 +1,16 @@
+https://medium.com/@shaaslam/installing-apache-kafka-on-windows-495f6f2fd3c8
+
+1. start Kafka- 
+.\bin\windows\kafka-server-start.bat .\config\server.properties
+2.Create topic 
+kafka-topics.bat — create — zookeeper localhost:2181 — replication-factor 1 — partitions 1 — topic sql-insert
+3.Start producer 
+kafka-console-producer.bat — broker-list localhost:9092 — topic sql-insert
+4. Start consumer
+kafka-console-consumer.bat -bootstrap-server localhost:2181 -topic sql-insert
+
+Done.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Java- 
+https://medium.com/pharos-production/kafka-using-java-e10bfeec8638
+
